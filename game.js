@@ -35,9 +35,20 @@ class Game {
     drawGame(){
         if(this.gameStatus == "startPage") {
             textAlign(CENTER);
+            fill(255,0,0)
             textSize(30)
-            text("press space to start", width / 2, height / 2);
-            //show some image to start
+            text("\"RED\"", width / 2, height / 2  -170)
+            fill("Black")
+            textSize(20)
+            text("will increase your score.", width / 2, height / 2 - 130)
+            text("Be careful when keeping your mouse", width / 2, height / 2 -100)
+            text("pressed in the wrong color,", width / 2, height / 2 -75)
+            text("it could considerably decrease your score.", width / 2, height / 2 -50)
+            text("Test your reflexes and get 1500 points", width / 2, height / 2 )
+            text("to master this challenge", width / 2, height / 2 +25)
+
+            textSize(25)
+            text("press space to start", width / 2, height / 2 + 125);
         } else if (this.gameStatus == "playing") {
 
                 if(frameCount % 60 === 0) {
@@ -64,7 +75,7 @@ class Game {
                 textSize(20);
                 textAlign(CENTER)
                 text(`score: ${this.score}`, 50, 50)
-                text(`timer left: ${counter}`,60,80)
+                text(`timer left: ${counter}`,60, 80)
             pop()
 
 
@@ -82,7 +93,7 @@ class Game {
         text("press space to restart the game", width / 2 , height / 2 + 100)
         
             if(this.score > 1500){
-                text(`Congratulations, your score is ${this.score}!`, width / 2, height / 2)
+                text(`Awesome, you did it!`, width / 2, height / 2)
             }else{
                 text(`Your Score is too low, try to get  1500 points`, width /2, height / 2)
             }
